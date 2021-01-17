@@ -134,6 +134,8 @@ jobs:
 
       - name: Build
         run: |
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
           mkdir -p build
           cd build
           cmake .. -DCMAKE_BUILD_TYPE=Debug \
@@ -149,6 +151,8 @@ jobs:
 
       - name: Test
         run: |
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
           # use etcd v3 api
           export ETCDCTL_API="3"
 
