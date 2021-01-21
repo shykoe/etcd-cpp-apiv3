@@ -2,3 +2,6 @@ build/
 compile_commands.json
 proto/**/*.pb.cc
 proto/**/*.pb.h
+bazel-*
+
+
